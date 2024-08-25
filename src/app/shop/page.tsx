@@ -20,7 +20,7 @@ const HomePage: React.FC = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await fetch('/api/inventory');
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/inventory`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
